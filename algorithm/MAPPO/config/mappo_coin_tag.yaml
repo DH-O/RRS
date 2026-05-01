@@ -1,0 +1,50 @@
+LR: 0.0005
+VF_COEF: 0.5
+NUM_ENVS: 200
+NUM_STEPS: 256
+TOTAL_TIMESTEPS: 3e7
+FC_DIM_SIZE: 64
+GRU_HIDDEN_DIM: 256
+UPDATE_EPOCHS: 10
+NUM_MINIBATCHES: 4
+GAMMA: 0.99
+GAE_LAMBDA: 0.95
+CLIP_EPS: 0.3
+SCALE_CLIP_EPS: false
+ENT_COEF: 0.015
+ANNEAL_ENT: false
+ENT_COEF_END: 0.001
+MAX_GRAD_NORM: 0.6
+ENV_NAME: MPE_simple_tag_scripted_prey_6v2
+SEED: 0
+"ENV_KWARGS": {
+  "max_steps": 256,
+  "score_function": "min",
+  "reward_mode": "dense",
+  "dense_reward_scale": 1.0,
+}
+
+WANDB_MODE: disabled
+COIN:
+  INFLUENCE_HIDDEN_DIM: 64
+  INFLUENCE_LR: 1e-3
+  INFLUENCE_BETA: 0.5
+  INFLUENCE_SIGMA: 1.0
+  CURIOSITY_HIDDEN_DIM: 64
+  CURIOSITY_LR: 1e-3
+  OBS_WEIGHT: 1.0
+  STATE_WEIGHT: 0.5
+  INFLUENCE_SCALE: 0.01
+  CURIOSITY_SCALE: 0.01
+  WARMUP_ROLLOUTS: 5
+  TARGET_TAU: 0.005
+  UPDATE_NETWORKS_EVERY: 1
+  EPS: 1e-8
+INTRINSIC_REWARD_SCALE: 1.0
+SPARSE_REWARD: false
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+  job:
+    chdir: false
