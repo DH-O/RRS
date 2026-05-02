@@ -40,5 +40,4 @@ Set `WANDB_MODE=disabled` in the YAML or as an override to skip Weights and Bias
 algorithm/   trainers and per-environment configs
 core/        RSQ, Successor Distance, networks, advantage utilities
 coin_modules/  COIN baseline modules
-scripts/     plot scripts (require local logs)
 ```
