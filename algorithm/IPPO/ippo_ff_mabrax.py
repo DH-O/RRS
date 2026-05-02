@@ -10,7 +10,6 @@ from flax.training.train_state import TrainState
 import distrax
 import jaxmarl
 from jaxmarl.wrappers.baselines import LogWrapper
-import matplotlib.pyplot as plt
 import hydra
 from omegaconf import OmegaConf
 import os

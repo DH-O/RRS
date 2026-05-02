@@ -2,9 +2,6 @@ import os
 import numpy as np
 import jax
 import wandb
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 from typing import Dict, Any, Set, Optional
 from .metrics import compute_entropy_per_agent, compute_sd_debug_metrics, format_progress_string
 from .utils import ParamsHolder, save_params, stack_params
