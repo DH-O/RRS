@@ -3,6 +3,7 @@ jax==0.4.38
 jaxlib==0.4.38
 jax-cuda12-pjrt==0.4.38
 jax-cuda12-plugin==0.4.38
+jaxmarl==0.1.0
 
 # NVIDIA CUDA libraries
 cuda-bindings>=12.9.0

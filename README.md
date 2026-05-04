@@ -9,7 +9,11 @@ pip install -r requirements.txt
 python setup_jax.py
 ```
 
-Requires JAX with CUDA and JaxMARL.
+Requires JAX with CUDA and JaxMARL. Then run
+```
+export PATH=$(python -c "import site; print(site.getsitepackages()[0] + '/nvidia/cuda_nvcc/bin')"):$PATH 
+pip install -e .
+```
 
 ## Run
 
