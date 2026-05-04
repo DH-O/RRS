@@ -7,6 +7,12 @@ Code for the paper "Quality-Aware Exploration Budget Allocation for Cooperative 
 ```bash
 pip install -r requirements.txt
 pip install -e .            # registers bundled jaxmarl, core, coin_modules
+
+# Expose the nvcc binaries shipped by nvidia-cuda-nvcc-cu12 so JAX can JIT-compile
+# PTX. setup_jax.py wires the same path into XLA_FLAGS, but ptxas itself still
+# has to be on PATH.
+export PATH=$(python -c "import site; print(site.getsitepackages()[0] + '/nvidia/cuda_nvcc/bin')"):$PATH
+
 python setup_jax.py
 ```
 
