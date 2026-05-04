@@ -6,10 +6,16 @@ Code for the paper "Quality-Aware Exploration Budget Allocation for Cooperative 
 
 ```bash
 pip install -r requirements.txt
+pip install -e .            # registers bundled jaxmarl, core, coin_modules
 python setup_jax.py
 ```
 
-Requires JAX with CUDA and JaxMARL.
+Requires JAX with CUDA 12. The `jaxmarl` package shipped in this repository is a
+fork that adds the custom MPE / SMAX / MABrax environments used in the paper
+(`MPE_simple_corridor_v3`, `MPE_simple_tag_scripted_prey_6v2`,
+`SMAX_27m_vs_30m`, `SMAX_3s5z_vs_3s6z`, `ant_4x2`, `ant_ball_4x2`,
+`halfcheetah_6x1`). Do not install `jaxmarl` from PyPI -- the bundled version
+must be used.
 
 ## Run
 
@@ -37,7 +43,10 @@ Set `WANDB_MODE=disabled` in the YAML or as an override to skip Weights and Bias
 ## Layout
 
 ```
-algorithm/   trainers and per-environment configs
-core/        RSQ, Successor Distance, networks, advantage utilities
+algorithm/     trainers and per-environment configs
+core/          RSQ, Successor Distance, networks, advantage utilities
 coin_modules/  COIN baseline modules
+jaxmarl/       bundled JaxMARL fork with custom MPE/SMAX/MABrax envs
+setup_jax.py   XLA flag setup (deterministic ops, CUDA data dir)
+pyproject.toml package definition (registers jaxmarl, core, coin_modules)
 ```
