@@ -1,6 +1,6 @@
 # RRS
 
-Code for the paper "Quality-Aware Exploration Budget Allocation for Cooperative Multi-Agent Reinforcement Learning".
+Code for the paper [Quality-Aware Exploration Budget Allocation for Cooperative Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2605.01865) (Oh, Yoon, and Kim, arXiv:2605.01865, 2026).
 
 ## Install
 
@@ -55,4 +55,17 @@ coin_modules/  COIN baseline modules
 jaxmarl/       bundled JaxMARL fork with custom MPE/SMAX/MABrax envs
 setup_jax.py   XLA flag setup (deterministic ops, CUDA data dir)
 pyproject.toml package definition (registers jaxmarl, core, coin_modules)
+```
+
+## Citation
+
+If you use this code, please cite:
+
+```bibtex
+@article{oh2026quality,
+  title={Quality-Aware Exploration Budget Allocation for Cooperative Multi-Agent Reinforcement Learning},
+  author={Oh, Dahyun and Yoon, Minhyuk and Kim, H. Jin},
+  journal={arXiv preprint arXiv:2605.01865},
+  year={2026}
+}
 ```
